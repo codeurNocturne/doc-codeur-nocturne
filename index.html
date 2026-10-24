@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'none'; frame-src 'none'; object-src 'none'; manifest-src 'none'; base-uri 'none'; form-action 'none'; require-trusted-types-for 'script'; trusted-types 'none'; upgrade-insecure-requests">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Comprends ce que tu construis | Codeur Nocturne</title>
+  <meta name="description" content="Le guide promis dans la vidéo : API REST, tests et authentification expliqués simplement. 45 pages, gratuit, sans inscription.">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#07070a">
+  <link rel="canonical" href="https://doc-codeur-nocturne.vercel.app/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:site_name" content="Codeur Nocturne">
+  <meta property="og:title" content="Comprends ce que tu construis">
+  <meta property="og:description" content="Le guide gratuit promis dans la vidéo : API REST, tests et authentification. 45 pages, sans inscription.">
+  <meta property="og:url" content="https://doc-codeur-nocturne.vercel.app/">
+  <meta property="og:image" content="https://doc-codeur-nocturne.vercel.app/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Codeur Nocturne tend la main, le guide flotte au-dessus de sa paume.">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="preload" href="assets/fonts/montserrat.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" as="image" href="assets/img/codeur-nocturne-860.webp" imagesrcset="assets/img/codeur-nocturne-640.webp 640w, assets/img/codeur-nocturne-860.webp 860w, assets/img/codeur-nocturne.webp 1086w" imagesizes="(min-width: 960px) 44vw, 118vw" fetchpriority="high">
+  <link rel="stylesheet" href="assets/css/site.css">
+  <script src="assets/js/site.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#contenu">Aller au contenu</a>
+
+  <svg class="sprite" aria-hidden="true" focusable="false">
+    <symbol id="i-moon" viewBox="0 0 256 256"><path d="M244,96a12,12,0,0,1-12,12H220v12a12,12,0,0,1-24,0V108H184a12,12,0,0,1,0-24h12V72a12,12,0,0,1,24,0V84h12A12,12,0,0,1,244,96ZM144,60h4v4a12,12,0,0,0,24,0V60h4a12,12,0,0,0,0-24h-4V32a12,12,0,0,0-24,0v4h-4a12,12,0,0,0,0,24Zm75.81,90.38A12,12,0,0,1,222,162.3,100,100,0,1,1,93.7,34a12,12,0,0,1,15.89,13.6A85.12,85.12,0,0,0,108,64a84.09,84.09,0,0,0,84,84,85.22,85.22,0,0,0,16.37-1.59A12,12,0,0,1,219.81,150.38ZM190,172A108.13,108.13,0,0,1,84,66,76,76,0,1,0,190,172Z"/></symbol>
+    <symbol id="i-download" viewBox="0 0 256 256"><path d="M228,144v64a12,12,0,0,1-12,12H40a12,12,0,0,1-12-12V144a12,12,0,0,1,24,0v52H204V144a12,12,0,0,1,24,0Zm-108.49,8.49a12,12,0,0,0,17,0l40-40a12,12,0,0,0-17-17L140,115V32a12,12,0,0,0-24,0v83L96.49,95.51a12,12,0,0,0-17,17Z"/></symbol>
+    <symbol id="i-book" viewBox="0 0 256 256"><path d="M232,44H160a43.86,43.86,0,0,0-32,13.85A43.86,43.86,0,0,0,96,44H24A12,12,0,0,0,12,56V200a12,12,0,0,0,12,12H96a20,20,0,0,1,20,20,12,12,0,0,0,24,0,20,20,0,0,1,20-20h72a12,12,0,0,0,12-12V56A12,12,0,0,0,232,44ZM96,188H36V68H96a20,20,0,0,1,20,20V192.81A43.79,43.79,0,0,0,96,188Zm124,0H160a43.71,43.71,0,0,0-20,4.83V88a20,20,0,0,1,20-20h60ZM164,96h32a12,12,0,0,1,0,24H164a12,12,0,0,1,0-24Zm44,52a12,12,0,0,1-12,12H164a12,12,0,0,1,0-24h32A12,12,0,0,1,208,148Z"/></symbol>
+    <symbol id="i-check" viewBox="0 0 256 256"><path d="M232.49,80.49l-128,128a12,12,0,0,1-17,0l-56-56a12,12,0,1,1,17-17L96,183,215.51,63.51a12,12,0,0,1,17,17Z"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 256 256"><path d="M204,64V168a12,12,0,0,1-24,0V93L72.49,200.49a12,12,0,0,1-17-17L163,76H88a12,12,0,0,1,0-24H192A12,12,0,0,1,204,64Z"/></symbol>
+    <symbol id="i-caret" viewBox="0 0 256 256"><path d="M216.49,104.49l-80,80a12,12,0,0,1-17,0l-80-80a12,12,0,0,1,17-17L128,159l71.51-71.52a12,12,0,0,1,17,17Z"/></symbol>
+    <symbol id="i-link" viewBox="0 0 256 256"><path d="M87.5,151.52l64-64a12,12,0,0,1,17,17l-64,64a12,12,0,0,1-17-17Zm131-114a60.08,60.08,0,0,0-84.87,0L103.51,67.61a12,12,0,0,0,17,17l30.07-30.06a36,36,0,0,1,50.93,50.92L171.4,135.52a12,12,0,1,0,17,17l30.08-30.06A60.09,60.09,0,0,0,218.45,37.55ZM135.52,171.4l-30.07,30.08a36,36,0,0,1-50.92-50.93l30.06-30.07a12,12,0,0,0-17-17L37.55,133.58a60,60,0,0,0,84.88,84.87l30.06-30.07a12,12,0,0,0-17-17Z"/></symbol>
+    <symbol id="i-x" viewBox="0 0 256 256"><path d="M208.49,191.51a12,12,0,0,1-17,17L128,145,64.49,208.49a12,12,0,0,1-17-17L111,128,47.51,64.49a12,12,0,0,1,17-17L128,111l63.51-63.52a12,12,0,0,1,17,17L145,128Z"/></symbol>
+    <symbol id="i-zoom-in" viewBox="0 0 256 256"><path d="M156,112a12,12,0,0,1-12,12H124v20a12,12,0,0,1-24,0V124H80a12,12,0,0,1,0-24h20V80a12,12,0,0,1,24,0v20h20A12,12,0,0,1,156,112Zm76.49,120.49a12,12,0,0,1-17,0L168,185a92.12,92.12,0,1,1,17-17l47.54,47.53A12,12,0,0,1,232.49,232.49ZM112,180a68,68,0,1,0-68-68A68.08,68.08,0,0,0,112,180Z"/></symbol>
+    <symbol id="i-zoom-out" viewBox="0 0 256 256"><path d="M156,112a12,12,0,0,1-12,12H80a12,12,0,0,1,0-24h64A12,12,0,0,1,156,112Zm76.49,120.49a12,12,0,0,1-17,0L168,185a92.12,92.12,0,1,1,17-17l47.54,47.53A12,12,0,0,1,232.49,232.49ZM112,180a68,68,0,1,0-68-68A68.08,68.08,0,0,0,112,180Z"/></symbol>
+    <symbol id="i-tiktok" viewBox="0 0 256 256"><path d="M224,68a44.05,44.05,0,0,1-44-44,12,12,0,0,0-12-12H128a12,12,0,0,0-12,12V156a16,16,0,1,1-22.85-14.47A12,12,0,0,0,100,130.69V88A12,12,0,0,0,85.9,76.19a79.35,79.35,0,0,0-47.08,27.74A81.84,81.84,0,0,0,20,156a80,80,0,0,0,160,0V122.67A107.47,107.47,0,0,0,224,132a12,12,0,0,0,12-12V80A12,12,0,0,0,224,68Zm-12,39.15a83.05,83.05,0,0,1-37-14.91A12,12,0,0,0,156,102v54a56,56,0,0,1-112,0,57.86,57.86,0,0,1,32-51.56V124a40,40,0,1,0,64,32V36h17.06A68.21,68.21,0,0,0,212,90.94Z"/></symbol>
+    <symbol id="i-github" viewBox="0 0 256 256"><path d="M212.62,75.17A63.7,63.7,0,0,0,206.39,26,12,12,0,0,0,196,20a63.71,63.71,0,0,0-50,24H126A63.71,63.71,0,0,0,76,20a12,12,0,0,0-10.39,6,63.7,63.7,0,0,0-6.23,49.17A61.5,61.5,0,0,0,52,104v8a60.1,60.1,0,0,0,45.76,58.28A43.66,43.66,0,0,0,92,192v4H76a20,20,0,0,1-20-20,44.05,44.05,0,0,0-44-44,12,12,0,0,0,0,24,20,20,0,0,1,20,20,44.05,44.05,0,0,0,44,44H92v12a12,12,0,0,0,24,0V192a20,20,0,0,1,40,0v40a12,12,0,0,0,24,0V192a43.66,43.66,0,0,0-5.76-21.72A60.1,60.1,0,0,0,220,112v-8A61.5,61.5,0,0,0,212.62,75.17ZM196,112a36,36,0,0,1-36,36H112a36,36,0,0,1-36-36v-8a37.87,37.87,0,0,1,6.13-20.12,11.65,11.65,0,0,0,1.58-11.49,39.9,39.9,0,0,1-.4-27.72,39.87,39.87,0,0,1,26.41,17.8A12,12,0,0,0,119.82,68h32.35a12,12,0,0,0,10.11-5.53,39.84,39.84,0,0,1,26.41-17.8,39.9,39.9,0,0,1-.4,27.72,12,12,0,0,0,1.61,11.53A37.85,37.85,0,0,1,196,104Z"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 256 256"><path d="M208,36H48A20,20,0,0,0,28,56v56c0,54.29,26.32,87.22,48.4,105.29,23.71,19.39,47.44,26,48.44,26.29a12.1,12.1,0,0,0,6.32,0c1-.28,24.73-6.9,48.44-26.29,22.08-18.07,48.4-51,48.4-105.29V56A20,20,0,0,0,208,36Zm-4,76c0,35.71-13.09,64.69-38.91,86.15A126.28,126.28,0,0,1,128,219.38a126.14,126.14,0,0,1-37.09-21.23C65.09,176.69,52,147.71,52,112V60H204ZM79.51,144.49a12,12,0,1,1,17-17L112,143l47.51-47.52a12,12,0,0,1,17,17l-56,56a12,12,0,0,1-17,0Z"/></symbol>
+  </svg>
+
+  <header class="topbar">
+    <p class="mark"><svg class="icon" aria-hidden="true"><use href="#i-moon"/></svg>codeur nocturne</p>
+  </header>
+
+  <main id="contenu">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <h1 id="hero-title">Comprends ce que tu construis.</h1>
+        <p class="lede">Le guide promis dans la vidéo&nbsp;: API REST, tests et authentification, expliqués simplement. À&nbsp;lire ici ou à télécharger.</p>
+      </div>
+
+      <div class="hero-visual">
+        <div class="photo">
+          <img class="portrait" src="assets/img/codeur-nocturne-860.webp" srcset="assets/img/codeur-nocturne-640.webp 640w, assets/img/codeur-nocturne-860.webp 860w, assets/img/codeur-nocturne.webp 1086w" sizes="(min-width: 960px) 44vw, 118vw" width="1086" height="1448" alt="Codeur Nocturne, assis, te tend la main. Le guide flotte au-dessus de sa paume." fetchpriority="high" decoding="async">
+          <span class="palm-glow" aria-hidden="true"></span>
+          <div class="doc-float">
+            <a class="doc" href="guide/Guide-Complet-Backend-Laravel.pdf" data-read="1" aria-label="Feuilleter le guide">
+              <span class="doc-tilt"><img src="assets/img/cover.webp" width="520" height="736" alt=""></span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-actions" data-actions>
+        <div class="actions">
+          <a class="btn btn-primary" href="guide/Guide-Complet-Backend-Laravel.pdf" download data-download>
+            <span class="btn-swap">
+              <span class="btn-idle"><svg class="icon" aria-hidden="true"><use href="#i-download"/></svg>Télécharger le guide</span>
+              <span class="btn-done" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Téléchargement lancé</span>
+            </span>
+          </a>
+          <a class="btn btn-ghost" href="guide/Guide-Complet-Backend-Laravel.pdf" data-read="1"><svg class="icon" aria-hidden="true"><use href="#i-book"/></svg>Lire en ligne</a>
+        </div>
+        <p class="note" role="status" data-note></p>
+      </div>
+    </section>
+
+    <section class="errors" aria-labelledby="errors-title">
+      <div class="wrap errors-grid">
+        <div class="errors-head">
+          <h2 id="errors-title">Tu fais sûrement ces 3&nbsp;erreurs.</h2>
+          <p class="section-lede">Touche une erreur pour la corriger.</p>
+          <p class="score" data-score-wrap>Corrigées&nbsp;: <span data-score>0</span>&nbsp;/&nbsp;3</p>
+        </div>
+
+        <div class="errors-body">
+          <ol class="err-list">
+            <li>
+              <button class="err" type="button" aria-pressed="false" data-err>
+                <span class="err-num" aria-hidden="true">1</span>
+                <span class="err-main">
+                  <span class="swap swap-tag"><span class="tag tag-bad is-off">Erreur</span><span class="tag tag-good is-on">Corrigée</span></span>
+                  <span class="err-bad">Dire à l’IA «&nbsp;Fais-moi une app&nbsp;».</span>
+                  <span class="err-fix"><span class="err-good">Donne-lui le contexte, les fonctionnalités attendues et les contraintes. Plus ton prompt est précis, meilleur sera le résultat.</span></span>
+                </span>
+                <span class="err-icon" aria-hidden="true"><svg class="icon is-off"><use href="#i-arrow"/></svg><svg class="icon is-on"><use href="#i-check"/></svg></span>
+              </button>
+            </li>
+            <li>
+              <button class="err" type="button" aria-pressed="false" data-err>
+                <span class="err-num" aria-hidden="true">2</span>
+                <span class="err-main">
+                  <span class="swap swap-tag"><span class="tag tag-bad is-off">Erreur</span><span class="tag tag-good is-on">Corrigée</span></span>
+                  <span class="err-bad">Tout accepter, sans faire les tests.</span>
+                  <span class="err-fix"><span class="err-good">Demande à l’IA d’écrire et de lancer les tests&nbsp;: unitaires pour les petites portions de code, fonctionnels pour tes fonctionnalités.</span></span>
+                </span>
+                <span class="err-icon" aria-hidden="true"><svg class="icon is-off"><use href="#i-arrow"/></svg><svg class="icon is-on"><use href="#i-check"/></svg></span>
+              </button>
+            </li>
+            <li>
+              <button class="err" type="button" aria-pressed="false" data-err>
+                <span class="err-num" aria-hidden="true">3</span>
+                <span class="err-main">
+                  <span class="swap swap-tag"><span class="tag tag-bad is-off">Erreur</span><span class="tag tag-good is-on">Corrigée</span></span>
+                  <span class="err-bad">Vouloir toute l’application en un seul prompt.</span>
+                  <span class="err-fix"><span class="err-good">Avance étape par étape&nbsp;: une fonctionnalité, un test, puis l’étape suivante.</span></span>
+                </span>
+                <span class="err-icon" aria-hidden="true"><svg class="icon is-off"><use href="#i-arrow"/></svg><svg class="icon is-on"><use href="#i-check"/></svg></span>
+              </button>
+            </li>
+          </ol>
+
+          <div class="err-done" data-done hidden>
+            <p>Les 3 sont corrigées. Pour que l’IA travaille vraiment pour toi, il faut savoir ce que tu lui demandes&nbsp;: c’est tout l’objet du guide.</p>
+            <a class="btn btn-ghost" href="guide/Guide-Complet-Backend-Laravel.pdf" data-read="1"><svg class="icon" aria-hidden="true"><use href="#i-book"/></svg>Lire en ligne</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="topics" aria-labelledby="topics-title">
+      <div class="wrap">
+        <h2 id="topics-title">API REST, tests, authentification.</h2>
+        <p class="section-lede">Les trois sujets promis dans la vidéo. Touche-en un pour l’ouvrir à la bonne page.</p>
+
+        <div class="bento">
+          <a class="tile tile-api" href="guide/Guide-Complet-Backend-Laravel.pdf#page=30" data-read="30">
+            <span class="tile-media"><img src="assets/img/ch-api.webp" width="900" height="908" alt="" loading="lazy" decoding="async"></span>
+            <span class="tile-body">
+              <span class="tile-meta">Chapitre 15 · page 30</span>
+              <h3 class="tile-title">API REST <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></h3>
+              <span class="tile-text">Les verbes HTTP, les ressources, les API Resources et la limitation de débit.</span>
+            </span>
+          </a>
+          <a class="tile" href="guide/Guide-Complet-Backend-Laravel.pdf#page=32" data-read="32">
+            <span class="tile-media"><img src="assets/img/ch-tests.webp" width="900" height="500" alt="" loading="lazy" decoding="async"></span>
+            <span class="tile-body">
+              <span class="tile-meta">Chapitre 17 · page 32</span>
+              <h3 class="tile-title">Les tests <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></h3>
+              <span class="tile-text">Pourquoi tester, et la différence entre tests unitaires et tests fonctionnels.</span>
+            </span>
+          </a>
+          <a class="tile" href="guide/Guide-Complet-Backend-Laravel.pdf#page=25" data-read="25">
+            <span class="tile-media"><img src="assets/img/ch-auth.webp" width="900" height="500" alt="" loading="lazy" decoding="async"></span>
+            <span class="tile-body">
+              <span class="tile-meta">Chapitre 11 · page 25</span>
+              <h3 class="tile-title">L’authentification <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></h3>
+              <span class="tile-text">Qui es-tu, et as-tu le droit&nbsp;? Guards, Gates, Policies et les outils de Laravel.</span>
+            </span>
+          </a>
+        </div>
+
+        <details class="toc">
+          <summary><span>Voir les 24 chapitres</span><svg class="icon" aria-hidden="true"><use href="#i-caret"/></svg></summary>
+          <ol class="toc-list">
+            <li><a href="guide/Guide-Complet-Backend-Laravel.pdf#page=3" data-read="3"><span class="toc-n">1</span><span class="toc-t">Introduction&nbsp;: le monde du backend et de Laravel</span><span class="toc-p">p.&nbsp;3</span></a></li>
+            <li><a href="guide/Guide-Complet-Backend-Laravel.pdf#page=5" data-read="5"><span class="toc-n">2</span><span class="toc-t">L’architecture MVC et le cycle de vie d’une requête</span><span class="toc-p">p.&nbsp;5</span></a></li>
+            <li><a href="guide/Guide-Complet-Backend-Laravel.pdf#page=6" data-read="6"><span class="toc-n">3</span><span class="toc-t">Installation et structure d’un projet Laravel</span><span class="toc-p">p.&nbsp;6</span></a></li>
+            <li><a href="guide/Guide-Complet-Backend-Laravel.pdf#page=8" data-read="8"><span class="toc-n">4</span><span class="toc-t">Le routage</span><span class="toc-p">p.&nbsp;8</span></a></li>
+            <li><a href="guide/Guide-Complet-Backend-Laravel.pdf#page=11" data-read="11"><span class="toc-n">5</span><span class="toc-t">Les contrôleurs</span><span class="toc-p">p.&nbsp;11</span></a></li>
+            <li><a href="guide/Guide-Complet-Backend-Laravel.pdf#page=13" data-read="13"><span class="toc-n">6</span><span class="toc-t">Requêtes, validation et réponses</span><span class="toc-p">p.&nbsp;13</span></a></li>
+            <li><a href="guide/Guide-Complet-Backend-Laravel.pdf#page=15" data-read="15"><span class="toc-n">7</span><span class="toc-t">Eloquent ORM et base de données</span><span class="toc-p">p.&nbsp;15</span></a></li>
+            <li><a href="guide/Guide-Complet-Backend-Laravel.pdf#page=21" data-read="21"><span class="toc-n">8</span><span class="toc-t">Blade&nbsp;: le moteur de templates</span><span class="toc-p">p.&nbsp;21</span></a></li>
+            <li><a href="guide/Guide-Complet-Backend-Laravel.pdf#page=22" data-read="22"><span class="toc-n">9</span><span class="toc-t">Les middlewares</span><span class="toc-p">p.&nbsp;22</span></a></li>
+            <li><a href="guide/Guide-Complet-Backend-Laravel.pdf#page=23" data-read="23"><span class="toc-n">10</span><span class="toc-t">Service Container, Service Providers et Facades</span><span class="toc-p">p.&nbsp;23</span></a></li>
+            <li class="is-key"><a href="guide/Guide-Complet-Backend-Laravel.pdf#page=25" data-read="25"><span class="toc-n">11</span><span class="toc-t">Authentification et autorisation</span><span class="toc-p">p.&nbsp;25</span></a></li>
+            <li><a href="guide/Guide-Complet-Backend-Laravel.pdf#page=26" data-read="26"><span class="toc-n">12</span><span class="toc-t">Events, Listeners et Observers</span><span class="toc-p">p.&nbsp;26</span></a></li>
+            <li><a href="guide/Guide-Complet-Backend-Laravel.pdf#page=28" data-read="28"><span class="toc-n">13</span><span class="toc-t">Jobs, queues et traitement asynchrone</span><span class="toc-p">p.&nbsp;28</span></a></li>
+            <li><a href="guide/Guide-Complet-Backend-Laravel.pdf#page=29" data-read="29"><span class="toc-n">14</span><span class="toc-t">Notifications et Mailables</span><span class="toc-p">p.&nbsp;29</span></a></li>
+            <li class="is-key"><a href="guide/Guide-Complet-Backend-Laravel.pdf#page=30" data-read="30"><span class="toc-n">15</span><span class="toc-t">Construire une API REST avec Laravel</span><span class="toc-p">p.&nbsp;30</span></a></li>
+            <li><a href="guide/Guide-Complet-Backend-Laravel.pdf#page=31" data-read="31"><span class="toc-n">16</span><span class="toc-t">Stockage de fichiers, cache et sessions</span><span class="toc-p">p.&nbsp;31</span></a></li>
+            <li class="is-key"><a href="guide/Guide-Complet-Backend-Laravel.pdf#page=32" data-read="32"><span class="toc-n">17</span><span class="toc-t">Les tests automatisés</span><span class="toc-p">p.&nbsp;32</span></a></li>
+            <li><a href="guide/Guide-Complet-Backend-Laravel.pdf#page=33" data-read="33"><span class="toc-n">18</span><span class="toc-t">Artisan CLI&nbsp;: les commandes essentielles</span><span class="toc-p">p.&nbsp;33</span></a></li>
+            <li><a href="guide/Guide-Complet-Backend-Laravel.pdf#page=34" data-read="34"><span class="toc-n">19</span><span class="toc-t">Les design patterns de Laravel</span><span class="toc-p">p.&nbsp;34</span></a></li>
+            <li><a href="guide/Guide-Complet-Backend-Laravel.pdf#page=35" data-read="35"><span class="toc-n">20</span><span class="toc-t">Glossaire du jargon backend, de A à Z</span><span class="toc-p">p.&nbsp;35</span></a></li>
+            <li><a href="guide/Guide-Complet-Backend-Laravel.pdf#page=40" data-read="40"><span class="toc-n">21</span><span class="toc-t">Problèmes courants et leurs solutions</span><span class="toc-p">p.&nbsp;40</span></a></li>
+            <li><a href="guide/Guide-Complet-Backend-Laravel.pdf#page=42" data-read="42"><span class="toc-n">22</span><span class="toc-t">Questions d’entretien fréquentes</span><span class="toc-p">p.&nbsp;42</span></a></li>
+            <li><a href="guide/Guide-Complet-Backend-Laravel.pdf#page=44" data-read="44"><span class="toc-n">23</span><span class="toc-t">Se préparer à un entretien backend</span><span class="toc-p">p.&nbsp;44</span></a></li>
+            <li><a href="guide/Guide-Complet-Backend-Laravel.pdf#page=45" data-read="45"><span class="toc-n">24</span><span class="toc-t">Pour aller plus loin</span><span class="toc-p">p.&nbsp;45</span></a></li>
+          </ol>
+        </details>
+      </div>
+    </section>
+
+    <section class="get" id="telecharger" aria-labelledby="get-title">
+      <div class="wrap get-inner" data-actions>
+        <div class="stack" aria-hidden="true">
+          <img src="assets/img/t25.webp" width="300" height="425" alt="" loading="lazy" decoding="async">
+          <img src="assets/img/t30.webp" width="300" height="425" alt="" loading="lazy" decoding="async">
+          <img src="assets/img/t01.webp" width="300" height="425" alt="" loading="lazy" decoding="async">
+        </div>
+        <h2 id="get-title">Gratuit, <span class="nowrap">sans inscription.</span></h2>
+        <p class="section-lede">Le Guide Complet du Backend Laravel, en PDF&nbsp;: 45&nbsp;pages, 0,5&nbsp;Mo.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="guide/Guide-Complet-Backend-Laravel.pdf" download data-download>
+            <span class="btn-swap">
+              <span class="btn-idle"><svg class="icon" aria-hidden="true"><use href="#i-download"/></svg>Télécharger le guide</span>
+              <span class="btn-done" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Téléchargement lancé</span>
+            </span>
+          </a>
+          <button class="btn btn-ghost" type="button" data-copy hidden>
+            <span class="btn-swap">
+              <span class="btn-idle"><svg class="icon" aria-hidden="true"><use href="#i-link"/></svg>Copier le lien</span>
+              <span class="btn-done" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Lien copié</span>
+            </span>
+          </button>
+        </div>
+        <p class="note" role="status" data-note data-inapp-note></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap foot-inner">
+      <p class="mark"><svg class="icon" aria-hidden="true"><use href="#i-moon"/></svg>codeur nocturne</p>
+      <ul class="social">
+        <li><a href="https://www.tiktok.com/@codeur_nocturne" rel="me noopener"><svg class="icon" aria-hidden="true"><use href="#i-tiktok"/></svg>TikTok</a></li>
+        <li><a href="https://github.com/codeurNocturne" rel="me noopener"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg>GitHub</a></li>
+      </ul>
+      <p class="foot-note">Sans framework, sans cookie, sans traqueur.</p>
+      <details class="verify">
+        <summary><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg>Vérifier le fichier</summary>
+        <div class="verify-body">
+          <p>Empreinte SHA-256 du PDF&nbsp;:</p>
+          <code class="hash">4982211b40427683f4d4bf6fa93f9d68456e7390bc4965421fcadb486d5e8784</code>
+          <p>Sous Windows&nbsp;: <code>certutil -hashfile Guide-Complet-Backend-Laravel.pdf SHA256</code></p>
+          <p>Sur Mac ou Linux&nbsp;: <code>shasum -a 256 Guide-Complet-Backend-Laravel.pdf</code></p>
+        </div>
+      </details>
+    </div>
+  </footer>
+
+  <dialog class="reader" id="reader" aria-labelledby="reader-title">
+    <div class="reader-shell">
+      <div class="reader-bar">
+        <div class="reader-info">
+          <p class="reader-title" id="reader-title">Guide Backend Laravel</p>
+          <p class="reader-count">Page <span id="reader-now">1</span> sur 45</p>
+        </div>
+        <button class="icon-btn" type="button" aria-pressed="false" aria-label="Agrandir les pages" data-zoom>
+          <svg class="icon zoom-in" aria-hidden="true"><use href="#i-zoom-in"/></svg>
+          <svg class="icon zoom-out" aria-hidden="true"><use href="#i-zoom-out"/></svg>
+        </button>
+        <a class="icon-btn" href="guide/Guide-Complet-Backend-Laravel.pdf" download aria-label="Télécharger le PDF"><svg class="icon" aria-hidden="true"><use href="#i-download"/></svg></a>
+        <button class="icon-btn" type="button" aria-label="Fermer la lecture" data-close><svg class="icon" aria-hidden="true"><use href="#i-x"/></svg></button>
+      </div>
+      <div class="reader-scroll" id="reader-scroll" tabindex="-1">
+        <ol class="reader-pages" id="reader-pages"></ol>
+      </div>
+    </div>
+  </dialog>
+</body>
+</html>
